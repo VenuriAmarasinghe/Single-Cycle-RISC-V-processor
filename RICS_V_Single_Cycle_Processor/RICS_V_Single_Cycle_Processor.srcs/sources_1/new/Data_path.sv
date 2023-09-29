@@ -25,7 +25,7 @@ module Data_path(
     );
     
     
-    assign Reg_write_enable_1=1;
+    
 
     Control_memory Control_memory_1(
         .opcode(Instruction[6:0]),
@@ -58,7 +58,18 @@ module Data_path(
         .Write_Data(Write_Data_1)
         );
     
-    
+    Imm_gen Imm_gen_1(
+        .Instruction(Instruction),
+        .Imm_gen_out(Immediate)
+        );
+        
+    ALU_decoder ALU_decoder_1(
+        .OP_code(ALU_OP_1),
+        .funct3(Instruction[14:12]),
+        .funct7_6(Instruction[31]),
+        .ALU_OPcode(ALU_ctrl),
+        );
+   
     
  
 endmodule

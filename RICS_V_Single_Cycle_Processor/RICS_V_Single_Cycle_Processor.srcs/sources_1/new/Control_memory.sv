@@ -21,7 +21,7 @@
 
 
 module Control_memory(
-    input [6:0] opcode,
+    input wire [6:0] opcode,
     output reg Branch,
     output reg Mem_read,
     output reg Mem_to_reg,

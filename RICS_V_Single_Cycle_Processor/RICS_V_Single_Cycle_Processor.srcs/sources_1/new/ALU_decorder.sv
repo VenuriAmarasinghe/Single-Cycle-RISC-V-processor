@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU_decorder #(ALU_OP_width=4,OP_width=7) (
-    input logic [OP_width-1:0] OP_code,
-    input logic [2:0] funct3,
-    input funct7_5,
-    output logic [ALU_OP_width-1:0] ALU_OPcode
+module ALU_decoder #(ALU_OP_width=4,OP_width=7) (
+    input wire [OP_width-1:0] OP_code,
+    input wire [2:0] funct3,
+    input wire funct7_6,
+    output reg [ALU_OP_width-1:0] ALU_OPcode
     
     );
     
