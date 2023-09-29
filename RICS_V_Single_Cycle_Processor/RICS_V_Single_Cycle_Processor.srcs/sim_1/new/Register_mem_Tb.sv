@@ -27,37 +27,50 @@ module Register_Memory_Tb(
 
     );
     
-     logic [4:0] Read_Reg_1;
-     logic [4:0] Read_Reg_2;
-     logic [4:0] Write_Reg;
-     logic Reg_Write_Enable;
-     logic [31:0] Read_Data_1;
-     logic [31:0] Read_Data_2;
-     logic [31:0] Write_Data;
-     logic [31:0] r[31:0];
-     Register_memory venu (
-        .Read_Reg_1(Read_Reg_1),
-        .Read_Reg_2(Read_Reg_2),
-        .Write_Reg(Write_Reg),
-        .Reg_Write_Enable(Reg_Write_Enable),
-        .Read_Data_1(Read_Data_1),
-        .Read_Data_2(Read_Data_2),
-        .Write_Data(Write_Data));
+     reg [4:0] Read_Reg_1;
+     reg [4:0] Read_Reg_2;
+     reg [4:0] Write_Reg;
+     reg Reg_Write_Enable;
+     wire [31:0] Read_Data_1;
+     wire  [31:0] Read_Data_2;
+     reg [31:0] Write_Data;
+     reg [31:0] r[31:0];
+     Register_memory  #(
+         .ADDR_WIDTH(5),
+         .DATA_WIDTH(32),
+         .Reg_no(32))
+             venu(
+                .Read_Reg_1(Read_Reg_1),
+                .Read_Reg_2(Read_Reg_2),
+                .Write_Reg(Write_Reg),
+                .Reg_Write_Enable(Reg_Write_Enable),
+                .Read_Data_1(Read_Data_1),
+                .Read_Data_2(Read_Data_2),
+                .Write_Data(Write_Data));
+  
   initial begin 
-    #1; // Delay by 1 time unit
-    r[1] <= 32'b00010;
-    #1; // Delay by 1 time unit
-    r[2] <= 32'b00001;
-    #1; // Delay by 1 time unit
-    Read_Reg_1 <= 5'b00001;
-    #1; // Delay by 1 time unit
-    Read_Reg_2 <= 5'b00010;
-    #1; // Delay by 1 time unit
-    Write_Reg <= 5'b101;
-    #1; // Delay by 1 time unit
-    Write_Data <= 32'b0001;
-    #1; // Delay by 1 time unit
-    Reg_Write_Enable <= 1;
+   
+    #10; // Delay by 1 time unit
+    Read_Reg_1=5'd1;
+    Read_Reg_2=5'd2;
+    Write_Reg =5'd5;
+    Reg_Write_Enable=1;
+    Write_Data=32'd20;
+    
+     #10; // Delay by 1 time unit
+    Read_Reg_1=5'd5;
+    Read_Reg_2=5'd2;
+    Write_Reg =5'd3;
+    Reg_Write_Enable=1;
+    Write_Data=32'd25;
+    
+     #10; // Delay by 1 time unit
+    Read_Reg_1=5'd5;
+    Read_Reg_2=5'd3;
+    Write_Reg =5'd5;
+    Reg_Write_Enable=1;
+    Write_Data=32'd20;
+    
 end
     
     
