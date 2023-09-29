@@ -30,6 +30,6 @@ module program_counter(
     logic [31:0] next_instruction;
     
     always_ff @(current_instruction ) begin
-        next_instruction <= current_instruction +1;
+        next_instruction <= current_instruction;
         end 
 endmodule
