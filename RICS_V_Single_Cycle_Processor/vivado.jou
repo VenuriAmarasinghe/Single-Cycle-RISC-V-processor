@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Sep 29 08:39:44 2023
+# Process ID: 12940
+# Current directory: C:/Users/venur/OneDrive/Documents/GitHub/Single-Cycle-RISC-V-processor/RICS_V_Single_Cycle_Processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20952 C:\Users\venur\OneDrive\Documents\GitHub\Single-Cycle-RISC-V-processor\RICS_V_Single_Cycle_Processor\RICS_V_Single_Cycle_Processor.xpr
+# Log file: C:/Users/venur/OneDrive/Documents/GitHub/Single-Cycle-RISC-V-processor/RICS_V_Single_Cycle_Processor/vivado.log
+# Journal file: C:/Users/venur/OneDrive/Documents/GitHub/Single-Cycle-RISC-V-processor/RICS_V_Single_Cycle_Processor\vivado.jou
+# Running On: DESKTOP-5C5TPG5, OS: Windows, CPU Frequency: 1690 MHz, CPU Physical cores: 4, Host memory: 16889 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/venur/OneDrive/Documents/GitHub/Single-Cycle-RISC-V-processor/RICS_V_Single_Cycle_Processor/RICS_V_Single_Cycle_Processor.xpr
+update_compile_order -fileset sources_1
