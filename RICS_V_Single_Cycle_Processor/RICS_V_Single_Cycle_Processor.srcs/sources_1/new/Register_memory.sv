@@ -27,15 +27,14 @@ module Register_memory #(
     input [ADDR_WIDTH-1:0] Read_Reg_2,
     input [ADDR_WIDTH-1:0] Write_Reg,
     input Reg_Write_Enable,
-    output [DATA_WIDTH-1:0] Read_Data_1,
-    output [DATA_WIDTH-1:0] Read_Data_2,
+    output reg [DATA_WIDTH-1:0] Read_Data_1,
+    output reg [DATA_WIDTH-1:0] Read_Data_2,
     input [DATA_WIDTH-1:0] Write_Data
 
 );
     
     reg [DATA_WIDTH-1:0] r[Reg_no-1:0];
-     reg [DATA_WIDTH-1:0] Read_Data_1;
-     reg [DATA_WIDTH-1:0] Read_Data_2;
+    
    
   
     always_ff @(Read_Reg_1) begin

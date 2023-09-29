@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/29/2023 08:36:52 AM
+// Create Date: 09/29/2023 09:15:20 AM
 // Design Name: 
-// Module Name: ADD4
+// Module Name: Imm_gen
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,12 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ADD4(
-    input [31:0] Data,
-    output reg [31:0] ADD4_out
+module Imm_gen(
+
     );
-    
-    always_comb begin
-        ADD4_out<= Data+4;
-        end 
 endmodule

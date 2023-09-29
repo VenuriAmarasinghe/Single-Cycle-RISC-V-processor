@@ -21,12 +21,12 @@
 
 
 module Instruction_memory(
-    input [31:0] Instruction_address,
-    output [31:0] Instruction
+    input logic [31:0] Instruction_address,
+    output logic [31:0] Instruction
     );
     
-    logic [31:0] Instruction_address;
-    logic [31:0]Instruction;
+    
+  
     logic [31:0] Ins_r [255:0];
     
     

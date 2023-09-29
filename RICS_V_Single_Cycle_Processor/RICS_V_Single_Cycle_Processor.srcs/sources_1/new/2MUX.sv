@@ -24,14 +24,14 @@ module MUX_2(
     input Mux_ctrl,
     input [31:0] Data_1,
     input [31:0] Data_0,
-    input [31:0] MUX_out
+    output reg [31:0] MUX_out
     );
     
     always_comb begin
         case(Mux_ctrl) 
             0:MUX_out<= Data_0;
             1:MUX_out<= Data_1;
-            Default: MUX_out<=Data_0;
+            default: MUX_out<=Data_0;
         endcase
     end 
 endmodule

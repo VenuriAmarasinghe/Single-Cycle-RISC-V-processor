@@ -21,17 +21,15 @@
 
 
 module Data_Memory(
-    input [31:0] Memory_Address,
-    input [31:0] Write_data,
-    input Mem_write,
-    input Mem_read,
-    output [31:0] Read_data
+    input logic [31:0] Memory_Address,
+    input logic [31:0] Write_data,
+    input logic Mem_write,
+    input logic Mem_read,
+    output logic [31:0] Read_data
     );
     
-    logic [31:0] Memory_Address;
-    logic [31:0] Write_data;
-    logic Mem_write,Mem_read;
-    logic [31:0] Read_data;
+    
+    
     logic [31:0] Data_r[255:0]; 
     always_ff @(Mem_read,Memory_Address) begin 
         if (Mem_read==1) begin 

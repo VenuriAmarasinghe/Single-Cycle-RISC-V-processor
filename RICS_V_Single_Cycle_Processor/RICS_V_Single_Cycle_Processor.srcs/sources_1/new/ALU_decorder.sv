@@ -29,7 +29,7 @@ module ALU_decorder #(ALU_OP_width=4,OP_width=7) (
     );
     
     always_comb begin
-    case(ALU_op) 
+    case(OP_code) 
     7'b00000000: begin 
     ALU_OPcode <= 4'b0000;
     

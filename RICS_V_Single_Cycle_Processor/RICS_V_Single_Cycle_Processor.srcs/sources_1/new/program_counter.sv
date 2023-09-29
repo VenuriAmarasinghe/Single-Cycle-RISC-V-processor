@@ -21,13 +21,12 @@
 
 
 module program_counter(
-    input [31:0] current_instruction,
-    output [31:0] next_instruction
+    input logic [31:0] current_instruction,
+    output logic [31:0] next_instruction
     );
     
     
-    logic [31:0] current_instruction;
-    logic [31:0] next_instruction;
+   
     
     always_ff @(current_instruction ) begin
         next_instruction <= current_instruction;

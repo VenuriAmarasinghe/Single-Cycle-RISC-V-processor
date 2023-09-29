@@ -22,22 +22,22 @@
 
 module Control_memory(
     input [6:0] opcode,
-    output Branch,
-    output Mem_read,
-    output Mem_to_reg,
-    output [6:0]ALU_OP,
-    output Mem_write,
-    output ALU_src,
-    output Reg_write
+    output reg Branch,
+    output reg Mem_read,
+    output reg Mem_to_reg,
+    output reg [6:0]ALU_OP,
+    output reg Mem_write,
+    output reg ALU_src,
+    output reg Reg_write
     );
     
     always_comb begin
-        case (Instruction)
+        case (opcode)
             7'b0110011: begin 
                Branch<=0;
                Mem_read <=0;
                Mem_to_reg<=0;
-               ALU_OP<= Instruction;
+               ALU_OP<= opcode;
                Mem_write<=0;
                ALU_src<=0;
                Reg_write<=1;
@@ -47,7 +47,7 @@ module Control_memory(
                Branch<=0;
                Mem_read <=0;
                Mem_to_reg<=0;
-               ALU_OP<= Instruction;
+               ALU_OP<= opcode;
                Mem_write<=0;
                ALU_src<=1;
                Reg_write<=1;
@@ -58,7 +58,7 @@ module Control_memory(
                Branch<=0;
                Mem_read <=0;
                Mem_to_reg<=0;
-               ALU_OP<= Instruction;
+               ALU_OP<= opcode;
                Mem_write<=0;
                ALU_src<=1;
                Reg_write<=1;

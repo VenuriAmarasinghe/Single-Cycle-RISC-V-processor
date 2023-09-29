@@ -22,7 +22,7 @@
 
 module ADD_shiftleft(
     input [31:0] Data,
-    output [31:0] ADD_shiftleft_out
+    output reg [31:0] ADD_shiftleft_out
     );
     
     always_comb begin
