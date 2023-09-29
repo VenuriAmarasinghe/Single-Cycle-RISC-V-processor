@@ -34,8 +34,8 @@ module Data_path(
         .Mem_to_reg(Mem_to_reg_1),
         .ALU_OP(ALU_OP_1),
         .Mem_write(Mem_write_1),
-        .ALU_src(,
-        output Reg_write
+        .ALU_src(ALU_src_1),
+        .Reg_write(Reg_write_enable_1)
     );    
     
     program_counter program_counter_1(
